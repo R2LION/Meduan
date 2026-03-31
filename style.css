@@ -238,3 +238,22 @@ h2{
   filter:grayscale(0%) brightness(1);
   transform:scale(1.05);
 }
+/* FOOTER */
+.footer{
+  text-align:center;
+  padding:30px 20px;
+  font-size:14px;
+  color:var(--soft);
+  background:#000;
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+
+/* efecto sutil premium */
+.footer p{
+  opacity:0.6;
+  transition:.3s;
+}
+
+.footer p:hover{
+  opacity:1;
+}
