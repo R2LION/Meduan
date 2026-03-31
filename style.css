@@ -1,0 +1,240 @@
+:root{
+  --bg:#000;
+  --text:#fff;
+  --soft:#999;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* NAV */
+header{
+  position:fixed;
+  width:100%;
+  top:0;
+  backdrop-filter:blur(10px);
+  background:rgba(0,0,0,0.5);
+  z-index:1000;
+}
+
+nav{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  padding:15px;
+}
+
+nav a{
+  color:var(--soft);
+  text-decoration:none;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:white;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+.hero h1{
+  font-size:3rem;
+  font-weight:800;
+  max-width:800px;
+}
+
+.hero p{
+  margin-top:15px;
+  color:var(--soft);
+}
+
+.btn{
+  margin-top:25px;
+  padding:14px 28px;
+  border-radius:30px;
+  background:white;
+  color:black;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+}
+
+/* SECTIONS */
+section{
+  padding:100px 20px;
+  text-align:center;
+}
+
+h2{
+  font-size:2rem;
+}
+
+/* GRID */
+.grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#111;
+  padding:30px;
+  border-radius:15px;
+  transition:.3s;
+}
+
+.card:hover{
+  background:#1a1a1a;
+}
+
+/* SLIDER */
+.slider{
+  position:relative;
+  max-width:700px;
+  margin:40px auto;
+  overflow:hidden;
+  border-radius:15px;
+}
+
+.slider img{
+  width:100%;
+}
+
+.after{
+  position:absolute;
+  top:0;
+  left:0;
+  width:50%;
+  overflow:hidden;
+}
+
+.handle{
+  position:absolute;
+  left:50%;
+  top:0;
+  width:3px;
+  height:100%;
+  background:white;
+  cursor:ew-resize;
+}
+
+/* CTA */
+/* FIX CTA */
+.cta{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:25px; /* 🔥 separación real */
+}
+
+.cta .btn{
+  margin-top:0; /* 🔥 quitamos el margen que estorba */
+}
+
+/* WHATS */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:15px;
+  border-radius:50%;
+  font-size:22px;
+}
+
+/* ANIMACIONES */
+.fade-up{
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s ease;
+}
+
+.fade-up.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.delay{transition-delay:.2s;}
+.delay2{transition-delay:.4s;}
+/* LOGO HERO */
+.logo{
+  width:500px;
+  max-width:80%;
+  margin-bottom:20px;
+
+  opacity:0;
+  transform:translateY(40px) scale(0.95);
+
+  filter: brightness(1.1) contrast(1.1)
+          drop-shadow(0 0 25px rgba(255,255,255,0.15));
+
+  transition: all 1s ease;
+}
+
+/* cuando aparece */
+.logo.visible{
+  opacity:1;
+  transform:translateY(0) scale(1);
+}
+
+/* efecto hover premium */
+.logo:hover{
+  transform:scale(1.05);
+}
+/* CLIENTES */
+.clientes{
+  text-align:center;
+}
+
+.clientes h2{
+  margin-bottom:40px;
+  font-weight:600;
+  font-size:2rem;
+}
+
+.clientes-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  max-width:900px;
+  margin:auto;
+}
+
+.clientes-grid img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:15px;
+
+  filter:grayscale(100%) brightness(0.8);
+  transition:.4s;
+}
+
+/* efecto premium */
+.clientes-grid img:hover{
+  filter:grayscale(0%) brightness(1);
+  transform:scale(1.05);
+}
